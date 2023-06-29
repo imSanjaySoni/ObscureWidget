@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - obscure_widget (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - obscure_widget (from `.symlinks/plugins/obscure_widget/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  obscure_widget:
+    :path: ".symlinks/plugins/obscure_widget/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  obscure_widget: c94c5d518f72e9ebcde99aaff16bba38d410dd69
+
+PODFILE CHECKSUM: ef19549a9bc3046e7bb7d2fab4d021637c0c58a3
+
+COCOAPODS: 1.12.1
