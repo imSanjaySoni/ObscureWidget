@@ -23,58 +23,81 @@ class ObscureWidgetController {
 }
 
 /// blur it's **child** when screen is being captured/recorded.
-///
-///* **[blur]** is the value of blur effect, higher the blur more the blur effect (default value = 5)
-///
-///* **[blurColor]** is the color of blur effect (default value = Colors.white)
-///
-///* **[borderRadius]** is the radius of the child to be blurred
-///
-///* **[colorOpacity]** is the opacity of the blurColor (default value = 0.5)
-
 class ObscureWidget extends StatelessWidget {
+  ///
+  ///* **[blur]** is the value of blur effect, higher the blur more the blur effect (default value = 5)
+  ///
+  ///* **[blurColor]** is the color of blur effect (default value = Colors.white)
+  ///
+  ///* **[borderRadius]** is the radius of the child to be blurred
+  ///
+  ///* **[colorOpacity]** is the opacity of the blurColor (default value = 0.5)
+  ///
   const ObscureWidget({
-    super.key,
-    required this.child,
-    this.blur = 5,
-    this.blurColor = Colors.white,
-    this.borderRadius,
-    this.colorOpacity = 0.5,
-  });
+    Key? key,
+    required Widget child,
+    double blur = 5,
+    Color blurColor = Colors.white,
+    BorderRadius? borderRadius,
+    double colorOpacity = 0.5,
+  })  : _builder = null,
+        _child = child,
+        _blur = blur,
+        _blurColor = blurColor,
+        _colorOpacity = colorOpacity,
+        _borderRadius = borderRadius,
+        super(key: key);
 
-  final Widget child;
-  final double blur;
-  final Color blurColor;
-  final BorderRadius? borderRadius;
-  final double colorOpacity;
+  ///
+  ///* use **[obscureBuilder]** to create custom obscure implementation
+  ///
+  const ObscureWidget.builder({
+    Key? key,
+    Widget? child,
+    required Widget Function(BuildContext context, bool isCaptured, Widget? child) obscureBuilder,
+  })  : _builder = obscureBuilder,
+        _child = child,
+        _blur = 5,
+        _blurColor = Colors.white,
+        _colorOpacity = 0.5,
+        _borderRadius = null,
+        super(key: key);
+
+  final Widget? _child;
+  final double _blur;
+  final Color _blurColor;
+  final BorderRadius? _borderRadius;
+  final double _colorOpacity;
+  final Widget Function(BuildContext, bool, Widget?)? _builder;
 
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<bool>(
-      builder: (_, isCaptured, child) {
-        if (isCaptured == false) return child!;
+      builder: _builder ??
+          (_, isCaptured, child) {
+            if (isCaptured == false) return child!;
 
-        return ClipRRect(
-          borderRadius: borderRadius ?? BorderRadius.zero,
-          child: Stack(
-            children: [
-              child!,
-              Positioned.fill(
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: blurColor.withOpacity(colorOpacity),
+            return ClipRRect(
+              borderRadius: _borderRadius ?? BorderRadius.zero,
+              child: Stack(
+                children: [
+                  child!,
+                  Positioned.fill(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: _blur, sigmaY: _blur),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: _blurColor.withOpacity(_colorOpacity),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
-            ],
-          ),
-        );
-      },
+            );
+          },
       valueListenable: ObscureWidgetController.isCaptured,
-      child: child,
+      child: _child,
     );
   }
 }

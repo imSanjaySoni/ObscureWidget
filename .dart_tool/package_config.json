@@ -137,10 +137,10 @@
       "name": "obscure_widget",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-06-29T15:04:42.862450Z",
+  "generated": "2023-06-30T20:48:57.301279Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }

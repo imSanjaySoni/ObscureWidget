@@ -1,11 +1,14 @@
 name: obscure_widget
-description: ObscureWidget blur its child when screen is being captured.
-version: 0.0.1
+description: ObscureWidget blurs its child when the screen is being captured. gives extra control to add custom handling when the screen is recorded.
 homepage: https://github.com/imSanjaySoni/ObscureWidget
-repository: https://github.com/imSanjaySoni/ObscureWidget.git
+repository: https://github.com/imSanjaySoni/ObscureWidget/tree/main
+issue_tracker: https://github.com/imSanjaySoni/ObscureWidget/issues
+documentation: https://github.com/imSanjaySoni/ObscureWidget/tree/main#readme
+
+version: 0.0.1
 
 environment:
-  sdk: '>=2.18.6 <3.0.0'
+  sdk: '>=2.14.0 <4.0.0'
   flutter: ">=2.5.0"
 
 dependencies:
@@ -25,3 +28,7 @@ flutter:
       ios:
         pluginClass: ObscureWidgetPlugin
         sharedDarwinSource: true
+
+screenshots:
+  - description: The obscure_widget plugin logo.
+    path: screenshots/logo.png
