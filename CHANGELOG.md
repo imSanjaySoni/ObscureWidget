@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Add ObscureWidget(), ObscureWidget.builder() and obscure() extension on widget.
