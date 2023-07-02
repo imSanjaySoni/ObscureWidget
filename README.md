@@ -12,6 +12,8 @@
 
 ---
 
+ObscureWidget blurs its child when the screen is being captured. gives extra control to add custom handling when the screen is recorded.
+
 ## Example
 
 | Initial                                                                                                                             |                                                           While recoding                                                           |
