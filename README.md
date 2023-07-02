@@ -1,14 +1,22 @@
 <p align="center">
-<img src="screenshots/banner.png" height="100" alt="Flutter Bloc Package" />
+<img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/banner.png" height="100" alt="ObscureWidget Plugin" />
 </p>
 
 <p align="center">
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/v/obscure_widget" alt="Pub"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/likes/obscure_widget" alt="Pub"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/popularity/obscure_widget" alt="Pub"></a>
+    <a href="https://pub.dev/packages/obscure_widget"><img alt="Pub Points" src="https://img.shields.io/pub/points/obscure_widget"></a>
+
 </p>
 
 ---
+
+## Example
+
+| Initial                                                                                                                             |                                                           While recoding                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/screenshot_01.png" alt="Demo"  width=320 /> | <img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/screenshot_02.png" alt="Demo" width=320 /> |
 
 ## Usages
 
