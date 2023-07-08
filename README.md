@@ -17,9 +17,9 @@
 
 ## Example
 
-| Initial                                                                                                                             |                                                           While recoding                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/screenshot_01.png" alt="Demo"  width=320 /> | <img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/screenshot_02.png" alt="Demo" width=320 /> |
+|                                                            Demo                                                            |                                                               Initial                                                               |                                                          While Recording                                                           |
+| :------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/demo.gif" alt="Demo"  width=320 /> | <img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/screenshot_01.png" alt="Demo"  width=320 /> | <img src="https://raw.githubusercontent.com/imSanjaySoni/ObscureWidget/main/screenshots/screenshot_02.png" alt="Demo" width=320 /> |
 
 ## Usages
 
