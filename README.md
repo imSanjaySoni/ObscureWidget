@@ -3,16 +3,17 @@
 </p>
 
 <p align="center">
+    <a href="https://pub.dev/packages/obscure_widget"><img alt="Platform iOS" src="https://img.shields.io/badge/iOS---?style=badge-squre&logo=apple&label=Platform&color=black"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/v/obscure_widget" alt="Pub"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/likes/obscure_widget" alt="Pub"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/popularity/obscure_widget" alt="Pub"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img alt="Pub Points" src="https://img.shields.io/pub/points/obscure_widget"></a>
-
+    <a href="https://github.com/imSanjaySoni/ObscureWidget"><img alt="License" src="https://img.shields.io/github/license/imsanjaysoni/ObscureWidget"></a>
 </p>
 
 ---
 
-ObscureWidget blurs its child when the screen is being captured. gives extra control to add custom handling when the screen is recorded.
+`ObscureWidget()` blurs its child when the screen is being captured. `ObscureWidget.builder()` gives extra control to add custom handling when the screen is recorded. currently supported on only iOS platform.
 
 ## Example
 
