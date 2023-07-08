@@ -13,7 +13,7 @@
 
 ---
 
-`ObscureWidget()` blurs its child when the screen is being captured. `ObscureWidget.builder()` gives extra control to add custom handling when the screen is recorded. currently supported on only iOS platform.
+`ObscureWidget()` blurs its child when the screen is being captured. `ObscureWidget.builder()` gives extra control to add custom handling when recording the screen. currently supported on only the iOS platform.
 
 ## Example
 
@@ -23,7 +23,7 @@
 
 ## Usages
 
-Lets take a look at how to use `ObscureWidget`, `ObscureWidget.builder()` and `.obscured()` extension.
+Let's look at how to use the `ObscureWidget`, `ObscureWidget.builder()`, and `.obscured()` extensions.
 
 ### ObscureWidget
 
