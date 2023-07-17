@@ -8,6 +8,7 @@
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/likes/obscure_widget" alt="Pub"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img src="https://img.shields.io/pub/popularity/obscure_widget" alt="Pub"></a>
     <a href="https://pub.dev/packages/obscure_widget"><img alt="Pub Points" src="https://img.shields.io/pub/points/obscure_widget"></a>
+    <a href="https://github.com/imSanjaySoni/ObscureWidget/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/imsanjaysoni/ObscureWidget?logo=github"></a>
     <a href="https://github.com/imSanjaySoni/ObscureWidget"><img alt="License" src="https://img.shields.io/github/license/imsanjaysoni/ObscureWidget"></a>
 </p>
 
