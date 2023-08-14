@@ -11,7 +11,7 @@ class ObscureWidgetController extends ValueNotifier<bool> {
 
   ObscureWidgetController() : super(false) {
     if (Platform.isIOS) {
-      _channel.receiveBroadcastStream().distinct().listen((event) {
+      _channel.receiveBroadcastStream().listen((event) {
         value = event as bool;
       });
     }
