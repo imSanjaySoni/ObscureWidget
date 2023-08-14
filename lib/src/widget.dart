@@ -6,20 +6,18 @@ import 'package:flutter/services.dart';
 
 /// Controller for **[ObscureWidget]** listen captured state from platform.
 
-class ObscureWidgetController {
+class ObscureWidgetController extends ValueNotifier<bool> {
   static const _channel = EventChannel('obscure_widget_channel');
-  static final _instance = ObscureWidgetController._private();
 
-  final _isCapturedNotifier = ValueNotifier<bool>(false);
-  static ValueNotifier<bool> get isCaptured => _instance._isCapturedNotifier;
-
-  ObscureWidgetController._private() {
+  ObscureWidgetController() : super(false) {
     if (Platform.isIOS) {
       _channel.receiveBroadcastStream().distinct().listen((event) {
-        _isCapturedNotifier.value = event as bool;
+        value = event as bool;
       });
     }
   }
+
+  bool get isCapturing => value == true;
 }
 
 /// blur it's **child** when screen is being captured/recorded.
@@ -96,7 +94,7 @@ class ObscureWidget extends StatelessWidget {
               ),
             );
           },
-      valueListenable: ObscureWidgetController.isCaptured,
+      valueListenable: ObscureWidgetController(),
       child: _child,
     );
   }
