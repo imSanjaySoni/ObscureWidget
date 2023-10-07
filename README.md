@@ -31,31 +31,34 @@ Let's look at how to use the `ObscureWidget`, `ObscureWidget.builder()`, and `.o
 supported parameters **blur**, **blurColor**, **borderRadius**, and **colorOpacity**
 
 ```dart
-ObscureWidget(
-    child: Container(
-    width: double.infinity,
-    color: Colors.amber,
-    padding: const EdgeInsets.all(18.0),
-    child: Text(
-        'Secure Text',
-        style: Theme.of(context).textTheme.headline6,
-        ),
+  ObscureWidget(
+    colorOpacity: 0.1,
+    borderRadius: BorderRadius.circular(4.0),
+    child: const Text(
+      'Some Secure Text',
+      style: TextStyle(
+        fontSize: 16.0,
+        color: Colors.grey,
+        fontWeight: FontWeight.w500,
+      ),
     ),
-)
+  );
 ```
 
 ### with .obscured() extension
 
 ```dart
- Container(
-    width: double.infinity,
-    color: Colors.amber,
-    padding: const EdgeInsets.all(18.0),
-    child: Text(
-    'Other Secure Text with extension',
-    style: Theme.of(context).textTheme.headline6,
+  const Text(
+    "Some Secure Text",
+    style: TextStyle(
+      fontSize: 16.0,
+      color: Colors.grey,
+      fontWeight: FontWeight.w500,
     ),
-).obscured(blur: 2, blurColor: Colors.red),
+  ).obscured(
+    colorOpacity: 0.1,
+    borderRadius: BorderRadius.circular(4.0),
+  );
 ```
 
 ### ObscureWidget.builder()
@@ -63,26 +66,37 @@ ObscureWidget(
 use this for custom implementation
 
 ```dart
-ObscureWidget.builder(
-    obscureBuilder: (context, isCaptured, child) {
-    return Container(
-        decoration: BoxDecoration(
-        border: Border.all(
-            width: 4,
-            color: isCaptured ? Colors.red : Colors.green,
-            ),
+  ObscureWidget.builder(
+    obscureBuilder: (_, bool isCapturing, Widget? child) {
+      return Text(
+        isCaptured ? '**** **** **** ****' : '1288 7068 2260 2640',
+        style: const TextStyle(
+          fontSize: 26.0,
+          fontWeight: FontWeight.bold,
         ),
-        child: child,
-    );
+      );
     },
-    child: Container(
-    width: double.infinity,
-    color: Colors.black,
-    padding: const EdgeInsets.all(18.0),
-    child: Text(
-        'Other Secure Text with builder constructor',
-        style: Theme.of(context).textTheme.headline6?.copyWith(color: Colors.white),
-        ),
-    ),
-)
+  );
+```
+
+### Listeners
+
+adding and removing listener
+
+```dart
+  final controller = ObscureWidgetController();
+
+  void listenerCallback() {
+    // Get updated boolean value with
+    bool state = controller.value;
+
+    // Get capture state
+    bool isCapturing = controller.isCapturing;
+  }
+
+  /// Add a Listener
+  controller.addListener(listenerCallback);
+
+  /// Remove a Listener
+  controller.removeListener(listenerCallback);
 ```
